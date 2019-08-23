@@ -75,15 +75,7 @@ public class MainActivity extends BaseToolBarActivity {
 
     @Override
     protected void initListener() {
-        etScan.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                Log.e(TAG, "onEditorAction: " + v.getText().toString().trim());
-                etScan.setText(v.getText().toString().trim());
-
-                return false;
-            }
-        });
+       
     }
 
     @Override
