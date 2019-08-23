@@ -14,6 +14,15 @@ allprojects {
 ```
 ## Step 2. Add the dependency	
 ``` Gradle
+
+android {
+	...
+	  compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
 dependencies {
 //****************************必须保留start******************
 		implementation fileTree(dir: 'libs', include: ['*.jar'])
