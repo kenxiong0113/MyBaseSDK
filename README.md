@@ -12,7 +12,7 @@ allprojects {
 		}
 	}
 ```
-## Step 2. Add the dependency	
+## Step 2. Add the dependency（注意使用版本）	
 ``` Gradle
 
 android {
@@ -32,7 +32,7 @@ dependencies {
 //****************************必须保留end******************
 // 项目使用butterknife 必须添加这行
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-	         implementation 'com.github.kenxiong0113:MyBaseSDK:v1.0.1'
+	         implementation 'com.github.kenxiong0113:MyBaseSDK:v1.0.（）'
 	}
 ```
 ## Step 3.初始化
