@@ -38,7 +38,7 @@ dependencies {
 ## Step 3.初始化
 ``` Java
 public class MyApplication extends Application {
-    @Override<
+    @Override
     public void onCreate() {
         super.onCreate();
 //        初始化base_utils_class
