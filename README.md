@@ -15,6 +15,12 @@ allprojects {
 ## Step 2. Add the dependency	
 ``` Gradle
 dependencies {
+//****************************必须保留start******************
+		implementation fileTree(dir: 'libs', include: ['*.jar'])
+   		testImplementation 'junit:junit:4.12'
+    		androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    		androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//****************************必须保留end******************
 	        implementation 'com.github.kenxiong0113:BaseLibrary:1.0.0'
 	}
 ```
