@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="images"
+        path="Pictures/Best/" />
+    <!-- /storage/emulated/0/Download/com.bugly.upgrade.demo/.beta/apk-->
+    <external-path
+        name="beta_external_path"
+        path="Download/" />
+    <!--/storage/emulated/0/Android/data/com.bugly.upgrade.demo/files/apk/-->
+    <external-path
+        name="beta_external_files_path"
+        path="Android/data/" />
+
+    <external-path
+        name="images"
+        path="Pictures/best/" />
+    <external-path
+        name="download"
+        path="download/" />
+
+    <external-path
+        name="images"
+        path="/" />
+
+    <!-- /storage/emulated/0/Download/-->
+    <external-path name="beta_external_apk" path="Download/"/>
+    <!--/storage/emulated/0/Android/data/-->
+    <external-path name="beta_external_apk2" path="Android/data//"/>
+    <external-path
+        name="files_root"
+        path="Android/data/com.cimctech.bestscancode_android/" />
+    <external-path
+        name="external_storage_root"
+        path="." />
+</paths>

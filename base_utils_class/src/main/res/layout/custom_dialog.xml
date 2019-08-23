@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_content_bg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/mg_20"
+        android:paddingTop="@dimen/mg_30"
+        android:paddingRight="@dimen/mg_20"
+        android:paddingBottom="@dimen/mg_30">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:inputType=""
+            android:lineSpacingExtra="5dp"
+            android:text="标题内容"
+            android:textColor="@color/color_black_33"
+            android:textSize="@dimen/ts_16" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_dip"
+        android:background="@color/code_cf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_positive"
+
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_dialog_left_click"
+            android:singleLine="true"
+            android:text="取消"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="@dimen/line_dip"
+            android:layout_height="match_parent"
+            android:background="@color/code_cf" />
+
+        <Button
+            android:id="@+id/btn_negative"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_dialog_right_click"
+            android:singleLine="true"
+            android:text="确定"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>
