@@ -21,7 +21,7 @@ dependencies {
     		androidTestImplementation 'com.android.support.test:runner:1.0.2'
     		androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 //****************************必须保留end******************
-	        implementation 'com.github.kenxiong0113:BaseLibrary:1.0.0'
+	        implementation 'com.github.kenxiong0113:BaseLibrary:1.0.1'
 	}
 ```
 ## Step 3.初始化
