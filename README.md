@@ -14,8 +14,25 @@ allprojects {
 ```
 ## Step 2. Add the dependency	
 ``` Gradle
+
+android {
+	...
+	  compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
 dependencies {
-	        implementation 'com.github.kenxiong0113:BaseLibrary:1.0.0'
+//****************************必须保留start******************
+		implementation fileTree(dir: 'libs', include: ['*.jar'])
+   		testImplementation 'junit:junit:4.12'
+    		androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    		androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//****************************必须保留end******************
+// 项目使用butterknife 必须添加这行
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+	         implementation 'com.github.kenxiong0113:MyBaseSDK:v1.0.1'
 	}
 ```
 ## Step 3.初始化
@@ -75,15 +92,7 @@ public class MainActivity extends BaseToolBarActivity {
 
     @Override
     protected void initListener() {
-        etScan.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                Log.e(TAG, "onEditorAction: " + v.getText().toString().trim());
-                etScan.setText(v.getText().toString().trim());
-
-                return false;
-            }
-        });
+       
     }
 
     @Override
