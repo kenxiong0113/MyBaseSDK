@@ -1,4 +1,11 @@
 
+版本说明
+===
+###（v1.1.3）
+## 1、新版本集成了权限管理的sdk 有用到（ api 'com.hjq:xxpermissions:x.x'）的需在主模块中去除，避免重复
+## 2、集成了蒲公英APP版本更新功能，详情使用方法请查看蒲公英官方文档，本sdk 关键使用请参考UpdateAppVersionActivity.java
+
+
 使用说明
 ====
 ## Step 1. Add the JitPack repository to your build file
@@ -8,6 +15,8 @@ allprojects {
 			...
 			maven { 
 			url 'https://jitpack.io'
+			// 1.1.3 新集成了蒲公英版本更新，crash 捕获的功能 必须添加下面这行
+			maven { url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master" }
 			}
 		}
 	}
@@ -101,6 +110,14 @@ public class MainActivity extends BaseToolBarActivity {
     }
 }
 ```
+#### 2.版本更新示例(请查看UpdateAppVersionActivity.java)：
+
+``` java
+    //关键代码：
+      UpdateAppVersionUtils.getInstance().checkAppVersion(this);
+```
+
+
 ## 打赏（不要理，我就是写一个图片表格试试）
 | ![](https://github.com/kenxiong0113/BaseLibrary/blob/master/img/ZhiFuBao.jpg)|![](https://github.com/kenxiong0113/BaseLibrary/blob/master/img/weichat.png)|
 --------- | -------------
