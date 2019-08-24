@@ -1,7 +1,7 @@
 
-版本说明
+版本说明(最新1.1.3)
 ===
-###（v1.1.3）
+## (1.1.3）
 ## 1、新版本集成了权限管理的sdk 有用到（ api 'com.hjq:xxpermissions:x.x'）的需在主模块中去除，避免重复
 ## 2、集成了蒲公英APP版本更新功能，详情使用方法请查看蒲公英官方文档，本sdk 关键使用请参考UpdateAppVersionActivity.java
 
@@ -41,7 +41,7 @@ dependencies {
 //****************************必须保留end******************
 // 项目使用butterknife 必须添加这行
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-	         implementation 'com.github.kenxiong0113:MyBaseSDK:v1.0.（）'
+	         implementation 'com.github.kenxiong0113:MyBaseSDK:x.x.x'
 	}
 ```
 ## Step 3.初始化
