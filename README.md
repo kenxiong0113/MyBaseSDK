@@ -30,8 +30,8 @@ dependencies {
     		androidTestImplementation 'com.android.support.test:runner:1.0.2'
     		androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 //****************************必须保留end******************
-// 项目使用butterknife 必须添加这行
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+//  项目使用butterknife 必须添加这行
+             annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 	         implementation 'com.github.kenxiong0113:MyBaseSDK:v1.0.1'
 	}
 ```

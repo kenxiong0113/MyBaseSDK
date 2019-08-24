@@ -1,19 +1,12 @@
 package com.cimcitech.base_utils_class.dialog;
 
 import android.app.Activity;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AlertDialog;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.cimcitech.base_utils_class.R;
 import com.cimcitech.base_utils_class.base.OnBaseCommonCallback;
-import com.cimcitech.base_utils_class.utils.DensityUtils;
 
 /**
  * Copyright (C) 2019-2020, by 中集智能, All rights reserved.
@@ -22,7 +15,8 @@ import com.cimcitech.base_utils_class.utils.DensityUtils;
  *
  * @author by ken
  * Create: 2019/8/22 16:17
- * @description： -----------------------------------------------------------------
+ * @description： APP升级提示对话框
+ * -----------------------------------------------------------------
  */
 public class UpdateAppDialog {
 
