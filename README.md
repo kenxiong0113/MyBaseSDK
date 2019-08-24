@@ -12,7 +12,7 @@ allprojects {
 		}
 	}
 ```
-## Step 2. Add the dependency	
+## Step 2. Add the dependency（注意使用版本）	
 ``` Gradle
 
 android {
@@ -30,15 +30,15 @@ dependencies {
     		androidTestImplementation 'com.android.support.test:runner:1.0.2'
     		androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 //****************************必须保留end******************
-//  项目使用butterknife 必须添加这行
-             annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-	         implementation 'com.github.kenxiong0113:MyBaseSDK:v1.0.1'
+// 项目使用butterknife 必须添加这行
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+	         implementation 'com.github.kenxiong0113:MyBaseSDK:v1.0.（）'
 	}
 ```
 ## Step 3.初始化
 ``` Java
 public class MyApplication extends Application {
-    @Override<
+    @Override
     public void onCreate() {
         super.onCreate();
 //        初始化base_utils_class
