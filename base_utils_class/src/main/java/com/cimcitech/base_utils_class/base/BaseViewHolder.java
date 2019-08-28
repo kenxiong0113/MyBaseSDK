@@ -88,6 +88,18 @@ public class BaseViewHolder extends RecyclerView.ViewHolder implements View.OnLo
         return this;
     }
 
+    /**
+     * 设置 textview的文本背景
+     *
+     * @param viewId     控件id
+     * @param resourceId 背景资源文件
+     */
+    public BaseViewHolder setTextBackgroundResource(int viewId, int resourceId) {
+        TextView textView = getView(viewId);
+        textView.setBackgroundResource(resourceId);
+        return this;
+    }
+
     public BaseViewHolder setBackgroundResource(int viewId, int resourceId) {
         ImageView imageView = getView(viewId);
         imageView.setBackgroundResource(resourceId);

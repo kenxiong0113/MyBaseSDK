@@ -81,7 +81,7 @@ public class MainActivity extends BaseToolBarActivity {
     public void setAdapter() {
         super.setAdapter();
         beanList.add(new MenuBean("APP版本更新", 0));
-
+        beanList.add(new MenuBean("个性化Toast", 1));
 
 
         adapter = new MenuGridViewAdapter(this, beanList);

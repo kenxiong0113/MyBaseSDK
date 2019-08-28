@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.UseToastActivity">
+
+
+    <Button
+        android:id="@+id/btn_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To display an error Toast" />
+
+
+    <Button
+        android:id="@+id/btn_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To display an success Toast" />
+
+
+    <Button
+        android:id="@+id/btn_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To display an info Toast" />
+
+
+    <Button
+        android:id="@+id/btn_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To display an warning Toast" />
+
+
+    <Button
+        android:id="@+id/btn_usual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To display an usual Toast" />
+
+    <Button
+        android:id="@+id/btn_usual_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To display the usual Toast with icon" />
+
+    <Button
+        android:id="@+id/btn_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="custom Toasts" />
+</LinearLayout>

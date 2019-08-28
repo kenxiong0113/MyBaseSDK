@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.ken.mybasesdk.R;
 import com.ken.mybasesdk.activity.UpdateAppVersionActivity;
+import com.ken.mybasesdk.activity.UseToastActivity;
 import com.ken.mybasesdk.bean.MenuBean;
 
 import java.util.List;
@@ -66,7 +67,9 @@ public class MenuGridViewAdapter extends BaseAdapter {
                     case 0:
 //                        APP 更新
                         intent.setClass(mContext, UpdateAppVersionActivity.class);
-
+                        break;
+                    case 1:
+                        intent.setClass(mContext, UseToastActivity.class);
                         break;
                     default:
                         break;
