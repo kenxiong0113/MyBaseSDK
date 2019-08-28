@@ -273,11 +273,11 @@ public abstract class BaseToolBarActivity extends AppCompatActivity implements B
         //hideAwaitDialog();
         //LogUtils.e(TAG, msg);
         try {
-            Toast.makeText(mActivity, msg, Toast.LENGTH_SHORT).show();
+            ToastUtil.showToast(mActivity,msg);
         } catch (Exception e) {
             //解决在子线程中调用Toast的异常情况处理
             Looper.prepare();
-            Toast.makeText(mActivity, msg, Toast.LENGTH_SHORT).show();
+            ToastUtil.showToast(mActivity,msg);
             Looper.loop();
         }
 
