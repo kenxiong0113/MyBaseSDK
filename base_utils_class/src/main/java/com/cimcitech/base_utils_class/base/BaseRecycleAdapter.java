@@ -16,6 +16,7 @@ import com.cimcitech.base_utils_class.R;
 import com.cimcitech.base_utils_class.dialog.CommonHintDialog;
 import com.cimcitech.base_utils_class.progress_dialog.PromptDialog;
 import com.cimcitech.base_utils_class.utils.DensityUtils;
+import com.cimcitech.base_utils_class.utils.ToastUtil;
 
 import java.util.List;
 import java.util.Objects;
@@ -142,11 +143,11 @@ public abstract class BaseRecycleAdapter<T> extends RecyclerView.Adapter<BaseVie
 
     public void showToast(String msg) {
         try {
-            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+            ToastUtil.showToast(context,msg);
         } catch (Exception e) {
             //解决在子线程中调用Toast的异常情况处理
             Looper.prepare();
-            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+            ToastUtil.showToast(context,msg);
             Looper.loop();
         }
     }
