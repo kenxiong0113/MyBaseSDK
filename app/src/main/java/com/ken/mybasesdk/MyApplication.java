@@ -38,6 +38,5 @@ public class MyApplication extends Application {
                 .allowQueue(true) // optional (prevents several Toastys from queuing)
                 .apply();
 
-        Toasty.Config.reset();
     }
 }

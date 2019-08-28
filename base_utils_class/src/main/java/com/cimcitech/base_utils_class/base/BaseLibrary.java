@@ -2,6 +2,8 @@ package com.cimcitech.base_utils_class.base;
 
 import android.content.Context;
 
+import es.dmoral.toasty.Toasty;
+
 public class BaseLibrary {
     public static Context mContext;
     public static int mIcon;
@@ -9,6 +11,8 @@ public class BaseLibrary {
 
     public static void initBaseLibrary(Context context) {
         mContext = context;
+
+        Toasty.Config.reset();
     }
 
 
