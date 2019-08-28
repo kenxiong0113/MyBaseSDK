@@ -19,6 +19,7 @@ import com.cimcitech.base_utils_class.dialog.CommonHintDialog;
 import com.cimcitech.base_utils_class.progress_dialog.PromptDialog;
 import com.cimcitech.base_utils_class.thread_pool.ThreadPoolProxyFactory;
 import com.cimcitech.base_utils_class.utils.DensityUtils;
+import com.cimcitech.base_utils_class.utils.ToastUtil;
 import com.cimcitech.base_utils_class.view.BaseViewIF;
 
 import org.greenrobot.eventbus.EventBus;
@@ -120,7 +121,7 @@ public abstract class BaseFragment extends Fragment implements BaseViewIF {
         ((Activity) mContext).runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
+                ToastUtil.showToast(mContext,msg);
             }
         });
     }
