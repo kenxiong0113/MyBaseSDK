@@ -1,5 +1,6 @@
 package com.cimcitech.base_utils_class.utils;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cimcitech.base_utils_class.R;
 import com.cimcitech.base_utils_class.base.OnBaseCommonCallback;
@@ -15,6 +17,8 @@ import com.pgyersdk.update.DownloadFileListener;
 import com.pgyersdk.update.PgyUpdateManager;
 import com.pgyersdk.update.UpdateManagerListener;
 import com.pgyersdk.update.javabean.AppBean;
+
+import es.dmoral.toasty.Toasty;
 
 /**
  * Copyright (C) 2019-2020, by 中集智能, All rights reserved.
@@ -83,6 +87,7 @@ public class UpdateAppVersionUtils {
                         //更新检测失败回调
                         //更新拒绝（应用被下架，过期，不在安装有效期，下载次数用尽）以及无网络情况会调用此接口
                         Log.e("pgyer", "check update failed ", e);
+                        activity.runOnUiThread(() -> Toasty.error(activity, "更新检测失败", Toast.LENGTH_SHORT, true).show());
                     }
                 })
                 //注意 ：
@@ -94,6 +99,8 @@ public class UpdateAppVersionUtils {
                     public void downloadFailed() {
                         //下载失败
                         Log.e("pgyer", "download apk failed");
+                        activity.runOnUiThread(() -> Toasty.error(activity, "下载失败", Toast.LENGTH_SHORT, true).show());
+
                     }
 
                     @Override
@@ -101,8 +108,10 @@ public class UpdateAppVersionUtils {
                         Log.e("pgyer", "download apk failed");
                         // 使用蒲公英提供的安装方法提示用户 安装apk
                         PgyUpdateManager.installApk(uri);
+                        dismissProgressDialog();
                     }
 
+                    @SuppressLint("SetTextI18n")
                     @Override
                     public void onProgressUpdate(Integer... integers) {
                         Log.e("pgyer", "update download apk progress" + integers.length);
@@ -115,7 +124,7 @@ public class UpdateAppVersionUtils {
                             progressBar.setProgress(integers[0]);
                             tvProgress.setText("下载进度：" + (int) integers[0] + "%");
                             if ((int) integers[0] == 100) {
-                                dismissProgressDialog();
+//                                dismissProgressDialog();
                             }
                         });
                     }

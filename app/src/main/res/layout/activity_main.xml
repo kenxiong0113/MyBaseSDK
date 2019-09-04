@@ -10,7 +10,9 @@
         android:id="@+id/gv_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="4" />
+        android:horizontalSpacing="@dimen/wh_8"
+        android:numColumns="4"
+        android:verticalSpacing="@dimen/wh_8" />
 
 
 </LinearLayout>
