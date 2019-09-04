@@ -1,5 +1,6 @@
 
-版本说明(最新1.1.5)
+
+版本说明(最新![JitPack](https://img.shields.io/jitpack/v/github/kenxiong0113/MyBaseSDK?color=green&label=version))
 ===
 ## （1.1.5）
 ## 说明 新增个性化toast
