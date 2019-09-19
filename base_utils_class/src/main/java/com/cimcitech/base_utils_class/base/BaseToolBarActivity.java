@@ -312,10 +312,42 @@ public abstract class BaseToolBarActivity extends AppCompatActivity implements B
 
     }
 
+
+    /**
+     * @param content 显示对话框内容
+     * @param rightStr 对话框确定按键显示文字
+     * @param onOKListener 确定监听
+     * */
     public void showSelectDialog(String content,String rightStr, View.OnClickListener onOKListener) {
         dismissSelectDialog();
         CommonHintDialog.Builder builder = new CommonHintDialog.Builder(this).setContent(content);
         builder.setNegativeButton(rightStr, onOKListener);
+
+
+        builder.setPositiveButton(getResources().getString(R.string.cancel), v -> {
+            dismissSelectDialog();
+        });
+        rCommonHintDialog = builder.create();
+
+        rCommonHintDialog.show();
+        Window win = rCommonHintDialog.getWindow();
+        win.getDecorView().setPadding(DensityUtils.dip2px(this, 20), 0, DensityUtils.dip2px(this, 20), 0);
+        WindowManager.LayoutParams lp = win.getAttributes();
+        lp.width = WindowManager.LayoutParams.FILL_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        win.setAttributes(lp);
+
+    }
+
+
+    /**
+     * @param content 显示对话框内容
+     * @param onOKListener 确定监听
+     * */
+    public void showSelectDialog(String content,View.OnClickListener onOKListener) {
+        dismissSelectDialog();
+        CommonHintDialog.Builder builder = new CommonHintDialog.Builder(this).setContent(content);
+        builder.setNegativeButton(getResources().getString(R.string.confirm), onOKListener);
 
 
         builder.setPositiveButton(getResources().getString(R.string.cancel), v -> {
