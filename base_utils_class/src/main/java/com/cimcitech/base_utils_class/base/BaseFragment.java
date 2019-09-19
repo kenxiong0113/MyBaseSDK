@@ -348,4 +348,15 @@ public abstract class BaseFragment extends Fragment implements BaseViewIF {
         promptDialog.showInfo(getResources().getString(R.string.dialog_prompt), true);
     }
 
+    @Override
+    public void showLoadingContent(String value) {
+        if (!isVisible()) {
+            return;
+        }
+        if (promptDialog == null) {
+            promptDialog = new PromptDialog(mActivity);
+        }
+        promptDialog.dismissImmediately();
+        promptDialog.showLoading(value, false);
+    }
 }
