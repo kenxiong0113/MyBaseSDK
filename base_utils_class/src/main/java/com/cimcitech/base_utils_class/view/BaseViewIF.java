@@ -22,6 +22,13 @@ public interface BaseViewIF {
 
     void showAwaitDialog(int id);
 
+
+    /**
+     * 自定义加载对话框文字
+     * @param value 加载文字
+     * */
+    void showLoadingContent(String value);
+
     void showAwaitDialog();
 
     void dismissAwaitDialog();
@@ -55,6 +62,8 @@ public interface BaseViewIF {
     void showToast(String content);
 
     void setAdapter();
+
+
 
 
 

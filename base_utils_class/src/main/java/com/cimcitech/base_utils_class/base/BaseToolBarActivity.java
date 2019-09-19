@@ -553,4 +553,18 @@ public abstract class BaseToolBarActivity extends AppCompatActivity implements B
         return super.dispatchTouchEvent(ev);
 
     }
+
+
+
+    @Override
+    public void showLoadingContent(String value) {
+        if (isFinishing()) {
+            return;
+        }
+        if (promptDialog == null) {
+            promptDialog = new PromptDialog(mActivity);
+        }
+        promptDialog.dismissImmediately();
+        promptDialog.showLoading(value, false);
+    }
 }
