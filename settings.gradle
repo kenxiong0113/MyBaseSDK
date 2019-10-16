@@ -1,1 +1,1 @@
-include ':app', ':base_utils_class'
+include ':app', ':base_utils_class', ':base_api_sdk'

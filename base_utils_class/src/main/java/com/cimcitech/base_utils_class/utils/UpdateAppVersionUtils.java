@@ -76,6 +76,7 @@ public class UpdateAppVersionUtils {
 
                             @Override
                             public void onError(String code, String error) {
+                                dismissProgressDialog();
                                 ToastUtil.showToast(mActivity, error);
                             }
                         });
@@ -99,7 +100,10 @@ public class UpdateAppVersionUtils {
                     public void downloadFailed() {
                         //下载失败
                         Log.e("pgyer", "download apk failed");
-                        activity.runOnUiThread(() -> Toasty.error(activity, "下载失败", Toast.LENGTH_SHORT, true).show());
+                        activity.runOnUiThread(() -> {
+                            dismissProgressDialog();
+                            Toasty.error(activity, "下载失败", Toast.LENGTH_SHORT, true).show();
+                        });
 
                     }
 
