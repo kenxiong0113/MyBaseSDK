@@ -1,0 +1,172 @@
+<resources>
+    <dimen name="title">18sp</dimen>
+    <dimen name="title_tab">16sp</dimen>
+    <dimen name="toolbar_height">88dp</dimen>
+
+
+    <!--bar -->
+    <dimen name="fixed_height_bottom_padding">24dp</dimen>
+    <dimen name="fixed_label_active">10sp</dimen>
+    <dimen name="fixed_label_inactive">10sp</dimen>
+    <dimen name="bottom_navigation_height">100dp</dimen>
+    <dimen name="fixed_icon_grid">48dp</dimen>
+    <dimen name="fixed_height_top_padding_inactive">4dp
+    </dimen><!-- 8(Top Padding) - 12/2(extra padding due to badges) = 2 -->
+    <dimen name="fixed_height_top_padding_active">4dp</dimen>
+
+
+    <!-- 默认字体大小 -->
+
+
+    <dimen name="ts_top_title">18sp</dimen>
+
+    <dimen name="ts_44">44sp</dimen>
+    <dimen name="ts_40">40sp</dimen>
+    <dimen name="ts_36">36sp</dimen>
+    <dimen name="ts_32">32sp</dimen>
+    <dimen name="ts_24">24sp</dimen>
+    <dimen name="ts_23">23sp</dimen>
+    <dimen name="ts_22">22sp</dimen>
+    <dimen name="ts_20">20sp</dimen>
+    <dimen name="ts_18">18sp</dimen>
+    <dimen name="ts_16">16sp</dimen>
+    <dimen name="ts_15">15sp</dimen>
+    <dimen name="ts_14">14sp</dimen>
+    <dimen name="ts_13">13sp</dimen>
+    <dimen name="ts_12">12sp</dimen>
+    <dimen name="ts_11">11sp</dimen>
+    <dimen name="ts_10">10sp</dimen>
+
+
+
+    <dimen name="ts_item_id">24sp</dimen>
+
+    <dimen name="line_dip">1dp</dimen>
+
+    <!-- 间距大小 -->
+    <dimen name="mg_440">880dp</dimen>
+    <dimen name="mg_360">720dp</dimen>
+    <dimen name="mg_270">540dp</dimen>
+    <dimen name="mg_245">490dp</dimen>
+    <dimen name="mg_240">480dp</dimen>
+    <dimen name="mg_198">396dp</dimen>
+    <dimen name="mg_190">380dp</dimen>
+    <dimen name="mg_151">302dp</dimen>
+    <dimen name="mg_140">280dp</dimen>
+    <dimen name="mg_108">216dp</dimen>
+    <dimen name="mg_132">264dp</dimen>
+    <dimen name="mg_120">240dp</dimen>
+    <dimen name="mg_112">224dp</dimen>
+    <dimen name="mg_100">200dp</dimen>
+    <dimen name="mg_90">180dp</dimen>
+    <dimen name="mg_88">176dp</dimen>
+    <dimen name="mg_85">170dp</dimen>
+    <dimen name="mg_82">164dp</dimen>
+    <dimen name="mg_80">160dp</dimen>
+    <dimen name="mg_75">150dp</dimen>
+    <dimen name="mg_73">146dp</dimen>
+    <dimen name="mg_72">144dp</dimen>
+    <dimen name="mg_70">140dp</dimen>
+    <dimen name="mg_68">136dp</dimen>
+    <dimen name="mg_66">132dp</dimen>
+    <dimen name="mg_60">120dp</dimen>
+    <dimen name="mg_58">116dp</dimen>
+    <dimen name="mg_54">108dp</dimen>
+    <dimen name="mg_50">100dp</dimen>
+    <dimen name="mg_48">96dp</dimen>
+    <dimen name="mg_46">92dp</dimen>
+    <dimen name="mg_45">90dp</dimen>
+    <dimen name="mg_44">88dp</dimen>
+    <dimen name="mg_40">80dp</dimen>
+    <dimen name="mg_37">74dp</dimen>
+    <dimen name="mg_36">72dp</dimen>
+    <dimen name="mg_35">70dp</dimen>
+    <dimen name="mg_30">60dp</dimen>
+    <dimen name="mg_28">56dp</dimen>
+    <dimen name="mg_25">50dp</dimen>
+    <dimen name="mg_24">48dp</dimen>
+    <dimen name="mg_18">36dp</dimen>
+    <dimen name="mg_23">46dp</dimen>
+
+    <dimen name="mg_22">44dp</dimen>
+    <dimen name="mg_21">42dp</dimen>
+    <dimen name="mg_20">40dp</dimen>
+    <dimen name="mg_16">32dp</dimen>
+    <dimen name="mg_15">30dp</dimen>
+    <dimen name="mg_14">28dp</dimen>
+    <dimen name="mg_13">26dp</dimen>
+    <dimen name="mg_12">24dp</dimen>
+    <dimen name="mg_10">20dp</dimen>
+    <dimen name="mg_8">16dp</dimen>
+    <dimen name="mg_6">12dp</dimen>
+    <dimen name="mg_5">10dp</dimen>
+    <dimen name="mg_3">6dp</dimen>
+    <dimen name="mg_4">8dp</dimen>
+    <dimen name="mg_2">4dp</dimen>
+
+    <!-- 宽高度 -->
+    <dimen name="wh_335">670dp</dimen>
+    <dimen name="wh_300">600dp</dimen>
+    <dimen name="wh_270">540dp</dimen>
+    <dimen name="wh_260">520dp</dimen>
+    <dimen name="wh_250">500dp</dimen>
+    <dimen name="wh_248">496dp</dimen>
+    <dimen name="wh_230">460dp</dimen>
+    <dimen name="wh_205">410dp</dimen>
+    <dimen name="wh_202">404dp</dimen>
+    <dimen name="wh_200">400dp</dimen>
+    <dimen name="wh_198">396dp</dimen>
+    <dimen name="wh_185">370dp</dimen>
+    <dimen name="wh_180">360dp</dimen>
+    <dimen name="wh_160">320dp</dimen>
+    <dimen name="wh_150">300dp</dimen>
+    <dimen name="wh_140">280dp</dimen>
+    <dimen name="wh_130">260dp</dimen>
+    <dimen name="wh_120">240dp</dimen>
+    <dimen name="wh_105">210dp</dimen>
+    <dimen name="wh_100">200dp</dimen>
+    <dimen name="wh_96">192dp</dimen>
+    <dimen name="wh_95">190dp</dimen>
+    <dimen name="wh_90">180dp</dimen>
+    <dimen name="wh_88">176dp</dimen>
+    <dimen name="wh_85">170dp</dimen>
+    <dimen name="wh_80">160dp</dimen>
+    <dimen name="wh_76">152dp</dimen>
+    <dimen name="wh_75">150dp</dimen>
+    <dimen name="wh_70">140dp</dimen>
+    <dimen name="wh_65">130dp</dimen>
+    <dimen name="wh_64">128dp</dimen>
+    <dimen name="wh_60">120dp</dimen>
+    <dimen name="wh_58">116dp</dimen>
+    <dimen name="wh_55">110dp</dimen>
+    <dimen name="wh_50">100dp</dimen>
+    <dimen name="wh_49">98dp</dimen>
+    <dimen name="wh_48">96dp</dimen>
+    <dimen name="wh_46">92dp</dimen>
+    <dimen name="wh_45">90dp</dimen>
+    <dimen name="wh_44">88dp</dimen>
+    <dimen name="wh_42">84dp</dimen>
+    <dimen name="wh_40">80dp</dimen>
+    <dimen name="wh_36">72dp</dimen>
+    <dimen name="wh_35">70dp</dimen>
+    <dimen name="wh_32">64dp</dimen>
+    <dimen name="wh_30">60dp</dimen>
+    <dimen name="wh_28">56dp</dimen>
+    <dimen name="wh_27">54dp</dimen>
+    <dimen name="wh_25">50dp</dimen>
+    <dimen name="wh_24">48dp</dimen>
+    <dimen name="wh_23">46dp</dimen>
+    <dimen name="wh_22">44dp</dimen>
+    <dimen name="wh_20">40dp</dimen>
+    <dimen name="wh_16">32dp</dimen>
+    <dimen name="wh_15">30dp</dimen>
+    <dimen name="wh_14">28dp</dimen>
+    <dimen name="wh_10">20dp</dimen>
+    <dimen name="wh_8">16dp</dimen>
+    <dimen name="wh_6">12dp</dimen>
+    <dimen name="wh_4">4dp</dimen>
+    <dimen name="wh_2">4dp</dimen>
+
+
+
+</resources>
