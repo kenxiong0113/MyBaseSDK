@@ -9,7 +9,6 @@ import com.cimcitech.base_utils_class.base.BaseLibrary;
 import es.dmoral.toasty.Toasty;
 
 public class ToastUtil {
-    private static Toast toast;
 
     @SuppressLint("ShowToast")
     public static void showToast(Context context, String content) {
@@ -18,12 +17,26 @@ public class ToastUtil {
                 "com.cimcitech.best_waybill".equals(BaseLibrary.packageName)) {
             Toasty.error(context, content, Toast.LENGTH_SHORT, true).show();
         } else {
-            if (toast == null) {
-                toast = Toast.makeText(context, content, Toast.LENGTH_SHORT);
-            } else {
-                toast.setText(content);
-            }
-            toast.show();
+
+            CustomToast.getInstance().showToast(context, content);
         }
     }
+
+    @SuppressLint("ShowToast")
+    public static void showToast(Context context, int stringId) {
+
+        if ("com.cimctech.bestscancode_android".equals(BaseLibrary.packageName) ||
+                "com.cimcitech.best_waybill".equals(BaseLibrary.packageName)) {
+            Toasty.error(context, context.getResources().getString(stringId), Toast.LENGTH_SHORT, true).show();
+        } else {
+
+            CustomToast.getInstance().showToast(context, stringId);
+        }
+    }
+
+    public static void cancelToast() {
+        CustomToast.getInstance().cancelToast();
+
+    }
+
 }

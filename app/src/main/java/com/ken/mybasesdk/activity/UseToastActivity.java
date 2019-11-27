@@ -3,15 +3,19 @@ package com.ken.mybasesdk.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.cimcitech.base_utils_class.base.BaseToolBarActivity;
+import com.cimcitech.base_utils_class.utils.CustomToast;
+import com.cimcitech.base_utils_class.utils.ToastUtil;
 import com.ken.mybasesdk.R;
 
 import butterknife.BindView;
 import es.dmoral.toasty.Toasty;
 
-public class UseToastActivity extends BaseToolBarActivity {
+public class UseToastActivity extends BaseToolBarActivity implements RadioGroup.OnCheckedChangeListener {
     private static final String TAG = "UseToastActivity";
     @BindView(R.id.btn_error)
     Button btnError;
@@ -27,6 +31,20 @@ public class UseToastActivity extends BaseToolBarActivity {
     Button btnUsualIcon;
     @BindView(R.id.btn_custom)
     Button btnCustom;
+    @BindView(R.id.rb_1)
+    RadioButton rb1;
+    @BindView(R.id.rb_2)
+    RadioButton rb2;
+    @BindView(R.id.rb_3)
+    RadioButton rb3;
+    @BindView(R.id.rb_4)
+    RadioButton rb4;
+    @BindView(R.id.rg_toast)
+    RadioGroup rgToast;
+    @BindView(R.id.btn_toast)
+    Button btnToast;
+
+    int type = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +69,7 @@ public class UseToastActivity extends BaseToolBarActivity {
 
     @Override
     protected void initListener() {
+        rgToast.setOnCheckedChangeListener(this);
         btnError.setOnClickListener(view -> Toasty.error(mActivity, "This is an error toast.", Toast.LENGTH_SHORT, true).show());
         btnSuccess.setOnClickListener(view -> Toasty.success(mActivity, "Success!", Toast.LENGTH_SHORT, true).show());
         btnInfo.setOnClickListener(view -> Toasty.info(mActivity, "Here is some info for you.", Toast.LENGTH_SHORT, true).show());
@@ -64,10 +83,43 @@ public class UseToastActivity extends BaseToolBarActivity {
 //        Toasty.custom(yourContext, "I'm a custom Toast", yourIconDrawable, tintColor, duration, withIcon,
 //                shouldTint).show();
 
+        btnToast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ToastUtil.showToast(UseToastActivity.this, "测试内容");
+            }
+        });
     }
 
     @Override
     protected void initData() {
 
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.rb_1:
+                type = 1;
+                break;
+            case R.id.rb_2:
+                type = 2;
+                break;
+            case R.id.rb_3:
+                type = 3;
+                break;
+            case R.id.rb_4:
+                type = 4;
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ToastUtil.cancelToast();
     }
 }

@@ -24,7 +24,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.UseToastActivity"></activity>
+        <activity android:name=".activity.UseToastActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".activity.UpdateAppVersionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
